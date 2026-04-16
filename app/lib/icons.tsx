@@ -179,6 +179,15 @@ export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function EnvelopeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <rect x="4" y="6" width="16" height="12" rx="2" />
+      <path d="M5.5 8L12 13L18.5 8" />
+    </IconBase>
+  );
+}
+
 export function AppleIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>

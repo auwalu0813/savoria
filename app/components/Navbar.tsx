@@ -13,7 +13,7 @@ const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Restaurants", href: "/restaurants" },
   { label: "Offers", href: "/offers" },
-  { label: "Blog", href: "#" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function LogoMark() {
@@ -42,6 +42,10 @@ function isActiveLink(pathname: string, href: string) {
 
   if (href === "/restaurants") {
     return pathname.startsWith("/restaurants");
+  }
+
+  if (href === "/blog") {
+    return pathname.startsWith("/blog");
   }
 
   if (href === "#") {

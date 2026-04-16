@@ -11,7 +11,7 @@ const footerColumns = [
       { label: "About us", href: "/about" },
       { label: "Careers", href: "#" },
       { label: "Press", href: "#" },
-      { label: "Blog", href: "#" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
