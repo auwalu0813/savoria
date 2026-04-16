@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+
+import { CartDrawer } from "@/app/components/CartDrawer";
+import { CartProvider } from "@/app/components/CartProvider";
+import { Footer } from "@/app/components/Footer";
+import { Navbar } from "@/app/components/Navbar";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -28,7 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-[var(--bg-primary)] font-sans text-[var(--cream)] antialiased">
-        {children}
+        <CartProvider>
+          <div className="min-h-screen bg-[var(--bg-primary)]">
+            <Navbar />
+            {children}
+            <Footer />
+            <CartDrawer />
+          </div>
+        </CartProvider>
       </body>
     </html>
   );
